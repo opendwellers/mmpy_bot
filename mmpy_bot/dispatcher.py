@@ -233,7 +233,7 @@ class Message(object):
         return self._client.api.upload_file(file, self.channel)
 
     def _gen_at_message(self, text):
-        return '@{}: {}'.format(self.get_username(), text)
+        return '{}: {}'.format(self.get_username(), text)
 
     def _gen_reply(self, text):
         if self._body['message_type'] == '?':
